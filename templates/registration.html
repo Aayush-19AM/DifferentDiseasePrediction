@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Health</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Health medical template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+body{
+	background-image:url("static/images/pic1.jpg");
+	background-color:#cccccc;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</style>
+</head>
+<body>
+    <div id="login">
+        <h3 class="text-center text-black pt-5"> Registration form</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+      
+      <hr/>
+      
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "alert alert-danger">
+            {{ message }}
+         </div>
+      {%- endfor %}
+      
+      <form action = "new.html" method = "post">
+      	<div class="form-group">
+         <label for = "name">Name</label><br>
+         <input type = "text" name = "name" placeholder = "Name" /><br>
+        </div>
+        <div class="form-group">
+         <label for="Adhar">Identification Number</label><br>
+         <input type="text" name="a" placeholder="Aadhar Number" minlength="12" maxlength="12" required/><br>
+        </div>
+        <div class="form-group">
+         <label for = "email">EMAIL</label><br>
+         <input type = "text" name = "email" placeholder = "Email" required /><br>
+        </div>
+        <div class="form-group">
+         <label for = "pass">Password</label><br>
+         <input type="text" name="pass" minlength="8" maxlength="12" required/><br>
+        </div>
+        <div class="form-group">
+         <label for = "mob">Mobile number</label><br>
+         <input type = "text" name = "mob" placeholder = "Mobile" /><br>
+        </div>
+        <div class="form-group">
+         <label for = "add">Address</label><br>
+         <input type = "text" name = "add" placeholder = "Address" /><br>
+         <div class="form-group">
+                                <!--<label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label>--><br>
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                            </div>
+             </div>
+             </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="static/js/jquery-3.3.1.min.js"></script>
+<script src="static/styles/bootstrap4/popper.js"></script>
+<script src="static/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="static/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="static/plugins/easing/easing.js"></script>
+<script src="static/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="static/js/custom.js"></script>
+   </body>
+</html>
